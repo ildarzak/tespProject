@@ -1,0 +1,429 @@
+*
+  margin: 0
+  padding: 0
+
+html
+  height: 100%
+  body
+    height: 100%
+
+.main
+  display: flex
+  justify-content: flex-start
+  flex-direction: row
+  align-items: stretch
+  width: 100%
+  min-height: 100%
+
+.left-panel
+  width: 160px
+  background-color: #0a426b
+  display: flex
+  flex-direction: column
+  align-items: stretch
+
+.item
+  p
+    width: 71px
+    height: 20px
+    font-family: PT Sans
+    font-size: 15px
+    font-weight: normal
+    font-style: normal
+    font-stretch: normal
+    line-height: 1.33
+    letter-spacing: normal
+    color: #ffffff
+    opacity: 0.5
+
+  .active
+    opacity: 1.0
+
+.title
+  display: flex
+  flex-direction: column
+  width: 840px
+
+.item
+  padding: 17px
+  display: flex
+  justify-content: space-around
+  &:hover
+    background-color: rgba(255, 255, 255, 0.2)
+
+.logo
+  padding: 17px
+  display: flex
+  justify-content: space-around
+
+.title
+  header
+    width: 100%
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-end
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3)
+    div
+      display: flex
+      flex-direction: row
+      align-items: center
+      p
+        min-width: 140px
+        font-family: PT Sans
+        font-size: 15px
+        font-weight: normal
+        font-style: normal
+        font-stretch: normal
+        line-height: 1.33
+        letter-spacing: normal
+        color: #000000
+
+.logout-icon
+  width: 18px
+  height: 18px
+  background-image: url('images/logout-icon.png')
+  opacity: 0.3
+  margin-right: 14px
+  margin-left: 20px
+
+.arrow-icon
+  width: 12px
+  height: 8px
+  opacity: 0.5
+  margin-left: 10px
+  margin-right: 40px
+  background-image: url('images/arrow.png')
+
+.user-icon
+  width: 40px
+  height: 40px
+  border-radius: 50px
+  background-color: rgba(0, 0, 0, 0.1)
+  margin: 12px 10px 12px 0
+  text-decoration: none
+  font-family: PT Sans
+  font-size: 18px
+  font-weight: normal
+  font-style: normal
+  font-stretch: normal
+  line-height: 1.11
+  letter-spacing: normal
+  text-align: center
+  color: rgba(0, 0, 0, 0.3)
+  span
+    position: relative
+    top: 9px
+
+.main-article
+  margin-left: 30px
+  margin-right: 45px
+  margin-top: 21px
+  display: flex
+  flex-direction: column
+  width: 765px
+  padding-right: -10px
+
+  .main-article-title
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 20px
+    h1
+      font-family: PT Sans
+      font-size: 40px
+      font-weight: normal
+      font-style: normal
+      font-stretch: normal
+      line-height: 1.38
+      letter-spacing: normal
+      margin: 0px
+    .abb-abj
+      width: 134px
+      height: 24px
+      background-color: #f0a512
+      color: white
+      border: none
+      margin-right: -4px
+      font-family: PT Sans
+      font-size: 14px
+      font-weight: normal
+      font-style: normal
+      font-stretch: normal
+      line-height: 1
+      letter-spacing: normal
+      color: #ffffff
+
+  .filters
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-start
+    margin-right: -14px
+    .input
+      height: 36px
+      border: solid 1px rgba(0, 0, 0, 0.25)
+      margin-right: 10px
+      margin-bottom: 10px
+
+    .input, .active
+      width: 190px
+
+    .address
+      width: 300px
+      padding-left: 35px
+      font-family: PT Sans
+      font-size: 15px 
+      font-weight: normal
+      font-style: normal 
+      font-stretch: normal 
+      line-height: 1.33 
+      letter-spacing: normal 
+      color: rgba(0, 0, 0, 0.85)
+      background: url("images/search-icon.png") no-repeat 12px
+
+    .agent
+      width: 220px
+      margin-right: 0px
+
+    .type
+      width: 125px
+
+    .agreements
+      width: 165px
+
+  .posts-column-title
+    font-family: PT Sans
+    font-size: 13px
+    font-weight: bold
+    font-style: normal
+    font-stretch: normal
+    line-height: 1.15
+    letter-spacing: normal
+    .addres
+      width: 295px
+    .calls
+      width: 75px
+    .chengeDate
+      width: 120px
+      padding-left: 37px
+
+  .posts-column
+    display: flex
+    flex-flow: row nowrap
+    border-bottom: 1px solid #d8d8d8
+    padding: 20px 0
+    justify-content: flex-start
+    .number
+      width: 215px
+      display: flex
+      justify-content: space-between
+      .photo
+        width: 110px
+        height: 75px
+        background-color: #ffffff
+        border: solid 1px rgba(0, 0, 0, 0.1)
+        margin-right: 15px
+        display: flex
+        justify-content: center
+        align-items: center
+      div
+        p
+          font-family: PT Sans
+          font-size: 13px
+          font-weight: normal
+          font-style: normal
+          font-stretch: normal
+          line-height: 1.38
+          letter-spacing: normal
+          color: rgba(0, 0, 0, 0.5)
+        span
+          font-family: PT Sans
+          font-size: 13px
+          font-weight: normal
+          font-style: normal
+          font-stretch: normal
+          line-height: 1.38
+          letter-spacing: normal
+          color: #0072bc
+      .calls
+        width: 75px
+      .chengeDate > span
+        margin-left: 15px
+
+    .posts-chengeDate
+      .posts-chengeDate-status
+        padding-left: 20px
+        display: flex
+        flex-flow: column nowrap
+        .posts-chengeDate-lable
+          display: inline-flex
+          align-items: center
+          flex-flow: row nowrap
+          .cercle
+            width: 15px
+            height: 15px
+            border-radius: 50%
+            margin-right: 5px
+            padding: 0
+
+          .cercle-1
+            background-color: #1ab000
+
+          .cercle-2
+            background-color: #f0a512
+
+          .cercle-3
+            background-color: rgba(0, 113, 188, 0.5)
+
+          .cercle-4
+            background-color: rgba(0, 0, 0, 0.3)
+          p
+            font-family: PT Sans
+            font-size: 10px
+            font-weight: bold
+            font-style: normal
+            font-stretch: normal
+            line-height: 1.5
+            letter-spacing: 2px
+            color: #000000
+        .posts-chengeDate-time
+          margin-left: 20px
+          font-family: PT Sans
+          font-size: 13px
+          font-weight: normal
+          font-style: normal
+          font-stretch: normal
+          line-height: 1.38
+          letter-spacing: normal
+          color: rgba(0, 0, 0, 0.5)
+      .posts-chengeDate-menu
+        img
+          cursor: pointer
+
+    .posts-chengeDate
+      display: flex
+      fiex-flow: row nowrap
+      justify-content: space-between
+      width: 190px
+    &:hover
+      h5
+        color: #be1e2d
+      .number
+        span
+          color: #be1e2d
+  //.posts-addres
+  //  .metro
+  //    background: url("images/metro-logo-vector-light-copy-3.png") no-repeat
+
+
+  .posts-calls
+    display: flex
+    flex-flow: column nowrap
+    width: 47px
+    height: 53px
+    justify-content: space-around
+    align-items: center
+    cursor: pointer
+    transform: translateX(-20%)
+    &:hover
+      background-color: rgba(0, 113, 188, 0.05)
+    span
+      display: inline-flex
+      flex-flow: row nowrap
+      align-items: center
+      font-family: PT Sans
+      font-size: 13px
+      font-weight: normal
+      font-style: normal
+      font-stretch: normal
+      line-height: 1.08
+      letter-spacing: normal
+
+  .posts-addres
+    display: flex
+    flex-flow: column nowrap
+    width: 315px
+    div
+      display: flex
+      flex-flow: column nowrap
+      h5
+        font-family: PT Sans
+        font-size: 15px
+        font-weight: bold
+        font-style: normal
+        font-stretch: normal
+        line-height: 1.33
+        letter-spacing: normal
+        color: #0072bc
+        cursor: pointer
+      span
+        display: inline-flex
+        flex-flow: row nowrap
+        align-items: center
+        font-family: PT Sans
+        font-size: 13px
+        font-weight: normal
+        font-style: normal
+        font-stretch: normal
+        line-height: 1.38
+        letter-spacing: normal
+        .metro
+          background: url("images/metro-logo-vector-light-copy.png") no-repeat
+          margin-right: 5px
+          width: 15px
+          height: 11px
+
+  .cost
+    margin-top: 10px
+    display: flex
+    flex-flow: column nowrap
+    h4
+      font-family: PT Sans
+      font-size: 15px
+      font-weight: normal
+      font-style: normal
+      font-stretch: normal
+      line-height: 1.33
+      letter-spacing: normal
+      color: rgba(0, 0, 0, 0.85)
+    p
+      font-family: PT Sans
+      font-size: 13px
+      font-weight: normal
+      font-style: normal
+      font-stretch: normal
+      line-height: 1.54
+      letter-spacing: normal
+      color: rgba(0, 0, 0, 0.5)
+  .calls
+    width: 75px
+    display: flex
+    flex-flow: column nowrap
+    justify-content: space-between
+    .posts-calls
+      font-family: PT Sans
+      font-size: 13px
+      font-weight: normal
+      font-style: normal
+      font-stretch: normal
+      line-height: 1.08
+      letter-spacing: normal
+      .incoming
+        color: #0072bc
+        p
+          margin-left: 6px
+      .incoming-lost
+        color: #be1e2d
+        p
+          margin-left: 6px
+    .agentName
+      font-family: PT Sans
+      font-size: 13px
+      font-weight: normal
+      font-style: normal
+      font-stretch: normal
+      line-height: 1.54
+      letter-spacing: normal
+      color: #0072bc
+      min-width: 170px

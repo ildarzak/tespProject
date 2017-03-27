@@ -1,0 +1,82 @@
+<div class="main-article">
+    <div class="main-article-title">
+        <h1>Обьекты</h1>
+        <button class="abb-abj">Добавить объект</button>
+    </div>
+    <div class="filters">
+        <select type="input" class="input activ" ng-model="status"
+                ng-options="item.name for item in filterOptions.stores"></select>
+        <input type="input" class="input address" ng-model="search.address" placeholder="№ объекта, адрес, лот">
+        <select type="input" class="input agent">
+            <option>Все агенты</option>
+        </select>
+        <select type="input" class="input type">
+            <option>Все типы</option>
+        </select>
+        <select type="input" class="input agreements">
+            <option>Все договоры</option>
+        </select>
+    </div>
+    <div class="posts-column posts-column-title">
+        <div class="number"><span>№, добавлен</span></div>
+        <div class="addres"><span>Адрес, цена, комиссия</span></div>
+        <div class="calls"><span>Все звонки, пропущено</span></div>
+        <div class="chengeDate"><span>Статус, дата изменения</span></div>
+    </div>
+    <div class="posts-column" ng-repeat="post in posts | filter:search | filter:filterExpression">
+        <div class="number posts-number">
+            <div>
+                <span>№8234545</span>
+                <p>Сегодня</p>
+            </div>
+            <div class="photo">
+                <img src="css/images/camera.png">
+            </div>
+        </div>
+        <div class="addres posts-addres">
+            <div>
+                <h5>{{post.address}}</h5>
+                <span><span class="metro"></span><p>{{post.metro}}</p></span>
+                <span ng-if="post.rooms == 1">{{post.rooms}} комната <p> 45 м² </p><p>{{post.floor}}/{{post.houseFloors}}</p> </span>
+                <span ng-if="post.rooms > 1 && post.rooms < 5">{{post.rooms}} комнаты <p> 45 м²</p></span>
+                <span ng-if="post.rooms >= 5">{{post.rooms}} комнат <p> 45 м²</p></span>
+                <span>Лот: 2347-ЖТ</span>
+            </div>
+            <span class="cost">
+                <h4>{{post.price | number}} ₽</h4>
+                <p>112 000 ₽</p>
+            </span>
+        </div>
+        <div class="calls">
+            <div class="posts-calls">
+                <span class="incoming"><img src="css/images/incoming-icon.png"><p>37</p></span>
+                <span class="incoming-lost"><img src="css/images/incoming-lost.png"><p>12</p></span>
+            </div>
+            <span class="agentName">{{post.agentName}}</span>
+        </div>
+        <div class="posts-chengeDate">
+            <div class="posts-chengeDate-status">
+                <div class="posts-chengeDate-lable" ng-if="post.status == 1">
+                    <div class="cercle cercle-{{post.status}}"></div>
+                    <p>ОПУБЛИКОВАН</p>
+                </div>
+                <div class="posts-chengeDate-lable" ng-if="post.status == 2">
+                    <div class="cercle cercle-{{post.status}}"></div>
+                    <p>МОДЕРАЦИЯ</p>
+                </div>
+                <div class="posts-chengeDate-lable" ng-if="post.status == 3">
+                    <div class="cercle cercle-{{post.status}}"></div>
+                    <p>ВНЕСЁН АВАНС</p>
+                </div>
+                <div class="posts-chengeDate-lable" ng-if="post.status == 4">
+                    <div class="cercle cercle-{{post.status}}"></div>
+                    <p>ЧЕРНОВИК</p>
+                </div>
+                <span class="posts-chengeDate-time">Вчера</span>
+            </div>
+            <a class="posts-chengeDate-menu">
+                <img src="css/images/more-vertical.png">
+            </a>
+        </div>
+    </div>
+</div>
