@@ -36,7 +36,7 @@
         <div class="addres posts-addres">
             <div>
                 <h5>{{post.address}}</h5>
-                <span><span class="metro"></span><p>{{post.metro}}</p></span>
+                <span ng-if="post.metro"><span class="metro"></span><p>{{post.metro}}</p></span>
                 <span ng-if="post.rooms == 1">{{post.rooms}} комната <p> 45 м² </p><p>{{post.floor}}/{{post.houseFloors}}</p> </span>
                 <span ng-if="post.rooms > 1 && post.rooms < 5">{{post.rooms}} комнаты <p> 45 м²</p></span>
                 <span ng-if="post.rooms >= 5">{{post.rooms}} комнат <p> 45 м²</p></span>
